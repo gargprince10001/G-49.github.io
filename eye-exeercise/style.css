@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+::selection{
+  color: #ffff;
+  background: rgb(142, 73, 232);
+}
+body{
+  width: 100%;
+  height: 100vh;
+  /* overflow: hidden; */
+  padding: 10px;
+  background: linear-gradient(to bottom, #8f80e4 50%, #497BE8 50%);
+}
+.header{
+    display: flex;
+    justify-content: center;
+    border-color: 2px solid red;
+    flex-direction: column;
+    /* border: 10px solid yellow; */
+    padding: 30px;
+
+
+    
+}
+#heading{
+    /* margin-left :10%; */
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation-name: example2;
+    animation-duration: 5s;
+      animation-iteration-count: 20;
+}
+@keyframes example2 {
+  25%   {background-color:rgb(10, 10, 10); color: white; border-radius: 10px ;}
+  50%  {background-color:white;color: black;border-radius: 10px}
+  75%  {background-color:rgb(10, 10, 10); color: white;border-radius: 10px}
+  100% {background-color:white;color: black;border-radius: 10px}
+}
+#gym{
+    border: 10px solid black;
+    padding: 5px;
+    border-radius: 100px ;
+    width: 150px;
+    margin-top: 20px;
+    height: 150px;
+    /* margin-left :46%; */
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: example1;
+    animation-duration: 2s;
+    animation-iteration-count: 100;
+/* text-align: center; */
+
+}
+@keyframes example1 {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+iframe{
+  border: 15px solid black;
+    background-color: blanchedalmond;
+    border-radius: 40px;
+    padding: 20px;
+    justify-content:center ;
+}
+.video{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+  
+    /* border: 10px solid yellow; */
+}
+/* .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  } */
+
+  footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    margin-top:10000px;
+  }

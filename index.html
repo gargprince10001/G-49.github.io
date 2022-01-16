@@ -1,0 +1,66 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="index.css">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="homefavicon.JPG" type="image/icon type">
+  <script>
+    var bleep = new Audio();
+    bleep.src = "beep.mp3";
+    if (localStorage.getItem("xValues") == undefined) {
+      var xValues = [0];
+      var yValues = [0];
+      var zValues = [0];
+      //15-01-2022
+      var focusArr = [];
+      var TaskArr = [];
+      localStorage.setItem("xValues", JSON.stringify(xValues));
+      localStorage.setItem("yValues", JSON.stringify(yValues));
+      localStorage.setItem("zValues", JSON.stringify(yValues));
+      localStorage.setItem("focusArr", JSON.stringify(focusArr)); //chnage1
+      localStorage.setItem("TaskArr", JSON.stringify(TaskArr));//change2
+      localStorage.setItem("MaximumFocusTime", 0);
+      localStorage.setItem("MinimumFocusTime", 0);
+      localStorage.setItem("TaskCompleted", 0);
+      localStorage.setItem("TaskSN", 1);
+    }
+    else {
+      console.log("already in");
+    }
+
+  </script>
+
+</head>
+
+<body>
+  <div class="header">
+    Task Management
+  </div>
+  <div class="container">
+
+    <div class="box">
+
+      <div class="container1">
+        <div class="todo" onmousedown="bleep.play()"><a href="To-Do\index.html" target="_blank"><img class="img-size"
+              src="todo.jpg" alt="TODO list"> </a></div>
+        <div class="pomo-doro" onmousedown="bleep.play()"><a href="Pomo-Doro\index.html" target="_blank"><img
+              class="img-size" src="pomodro.png" alt="Pomodro Timer Master"></a></div>
+      </div>
+      <div class="container2">
+        <div class="todo" onmousedown="bleep.play()"><a href="D:\Deployment\Music-Player\index.html"
+            target="_blank"><img class="img-size" src="musicapp.jpg" alt="Music Player"></a></div>
+        <div class="pomo-doro" onmousedown="bleep.play()"><a
+            href="eye-exeercise\index.html" target="_blank"><img class="img-size"
+              src="eye exercise.jpg" alt="Eye Exercise"></a></div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+  <div class="my-activity">
+    <a href="my-activity\index.html" id="ma-s" target="_blank">My-Activity</a>
+  </div>
+</body>
+
+</html>

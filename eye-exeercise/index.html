@@ -1,0 +1,152 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Eye Exercise</title>
+  <style>
+    .grid-container {
+      display: flex;
+      /* grid-template-columns: auto auto auto; */
+      /* background-color: #21f375; */
+      flex-wrap: wrap;
+      padding: 10px;
+      margin-top: 50px;
+      justify-content: center;
+
+    }
+
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.8);
+      /* border-collapse: separate; */
+      /* border-spacing: 150px; */
+      margin-top: 10px;
+      border: 10px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+      font-family: sans-serif;
+      font-weight: bolder;
+      /* display: inline-block; */
+      width: 600px;
+      height: 130px;
+      padding: 10px;
+
+
+    }
+
+    .grid-item:hover {
+      background-color: white;
+      border: 2px solid rgb(14, 13, 13);
+
+    }
+
+    .exercise {
+      display: flex;
+      margin-top: 20px;
+      justify-content: center;
+      border: 10px solid rgb(14, 13, 13);
+    }
+
+    #content {
+      background-color: black;
+      color: white;
+      padding: 25px;
+      text-align: center;
+
+    }
+
+    footer {
+      /* display: flex; */
+      position: fixed;
+
+      margin-top: 0px;
+      text-align: center;
+      padding: 3px;
+      background-color: black;
+      color: red;
+      animation-name: example;
+      animation-duration: 20s;
+      animation-iteration-count: 5;
+    }
+
+
+    .set {
+      width: 100%;
+      height: 30%;
+    }
+
+
+
+
+    @keyframes example {
+      0% {
+        background-color: red;
+        color: rgb(11, 49, 241);
+      }
+
+      25% {
+        background-color: rgb(0, 0, 0);
+        color: white;
+      }
+
+      50% {
+        background-color: rgb(177, 172, 214);
+        color: black;
+      }
+
+      100% {
+        background-color: rgb(37, 235, 205);
+        color: red;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h1 id='heading'><b>Now is Time To Relax Your Eyes</b></h1>
+    <img id='gym' src="eye exercise.jpg" alt="">
+  </div>
+
+
+  <div class="video">
+    <!-- <h1>This workout helps to relax your eye muscles and increases blood circulation in your eyes</h1> -->
+
+    <!-- ?autoplay=1&mute=1 -->
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/QQ3ki1dCcnw" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+
+  <div class="exercise">
+    <h1 id="content">These are the 10 exercises you will do for the eyes , if you don't know how to do eye exercise then
+      check out the above youtube video else refer to the below list.
+    </h1>
+  </div>
+
+  <div class="grid-container">
+    <div class="grid-item">Blink for a minute</div>
+    <div class="grid-item"> Rotate your head while staring ahead</div>
+    <div class="grid-item"> Look to your right and left</div>
+    <div class="grid-item">Close your eyes and relax.</div>
+    <div class="grid-item">Move your gaze in different directions</div>
+    <div class="grid-item">Close and open your eyes</div>
+    <div class="grid-item">Push against your temples with your fingers.</div>
+    <div class="grid-item">Draw geometric figures with your gaze</div>
+    <div class="grid-item"> Move your eyeballs up and down</div>
+    <div class="grid-item"> Strengthen your eyes’ near and far focusing</div>
+
+  </div>
+  <div class="set">
+  </div>
+  <footer>
+    <h2><b>This workout helps to relax your eye muscles and increases blood circulation in your eyes</b></h2>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Activity </title>
+    <link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/activity.png" type="image/icon type">    
+    <style>
+            body{
+                width: 60%;
+            height: 50%;
+            margin: 1% 20% 25% 20%;
+            border: 1px solid;
+            background-color: rgb(5, 5, 0);
+            }
+            h1{
+                color: rgb(248, 248, 248);
+            }
+            .chart{
+                background-color: white;
+            }
+            .activity{
+                display: flex;
+                justify-content: center;
+            }
+            .a1{
+                color: white;
+                font-size: 3rem;
+                border: 10px solid white;
+                padding: 20px;
+                border-radius: 20rem;
+            }
+            .pomo-info{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                flex-direction: column;
+                text-align: center;
+            }
+          h3:hover{
+              border: 2px solid grey;
+              font-size: 20px;
+              font-weight: 200;
+          }
+         h3{
+             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         }
+    </style>
+</head>
+<body>
+<div class="activity">
+    <div class="a1">Your Activity</div>
+</div>
+
+<div id="myPlot1" style="width:100%;max-width:700px;margin-left: 5rem;margin-top: 5%;"></div>
+
+<script>
+var xArray = JSON.parse(localStorage.getItem("TaskArr"));
+var yArray = JSON.parse(localStorage.getItem("focusArr"));
+console.log(xArray);
+console.log(yArray);
+// Define Data
+var data = [{
+  x:xArray,
+  y:yArray,
+  mode:"bar"//"lines"
+}];
+
+// Define Layout
+var layout = {
+  xaxis: {range: [1, 60], title: "Tasks"},
+  yaxis: {range: [1, 60], title: "Focus Time"},  
+  title: "Focus Time Vs Tasks"
+};
+
+// Display using Plotly
+Plotly.newPlot("myPlot1", data, layout);
+
+
+</script>
+<div class="about-1" style="border: 2px solid white; padding:3px ; margin-top: 10px; margin-bottom: 10px;">
+    <h2 style="color: white; padding: 5px;">The above Line graph shows the realtion between focus Time and Tasks</h2>
+
+        </div>
+<div class="chart" >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<!-- <body> -->
+<canvas id="myChart" style="width:100%;max-width:1000px; margin-top:5rem;"></canvas>
+
+<script>
+var yValues1 = JSON.parse(localStorage.getItem("xValues"));
+var xValues1 = JSON.parse(localStorage.getItem("yValues"));
+var barColors = ["red", "green","blue","orange","brown","yellow","black","red", "green","blue","orange","brown","yellow","black","red", "green","blue","orange","brown","yellow","black","red", "green","blue","orange","brown","yellow","black"];
+
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues1,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues1
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Task Completed Vs Days"
+    }
+  }
+});
+
+// h2.textContent = text;
+</script>
+</div>
+
+<div style="border: 2px solid white; padding:3px ; margin-top: 10px;"  class="about">
+    <h2 style="color: white; padding: 5px;">The above Bar graph shows the data of how many Tasks you completed per day.</h2>
+</div>
+<div class="pomo-info" style="border: 2px solid white; padding:3px ; margin-top: 10px; ">
+    <h3 id="maxF" style="color: rgb(253, 243, 152); padding: 5px;display: block;"></h3>
+    <h3  id="maxT" style="color: rgb(253, 243, 152); padding: 5px;"></h3>
+    <h3 id="Total-Tasks" style="color: rgb(253, 243, 152); padding: 5px;"></h3>
+</div>
+<script src="chart1.js"></script>
+</body>
+</html>
